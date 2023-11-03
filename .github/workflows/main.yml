@@ -51,3 +51,4 @@ jobs:
             sudo docker rmi ${{ secrets.DOCKERHUBUSERNAME }}/furniture:latest
             sudo docker pull ${{ secrets.DOCKERHUBUSERNAME }}/furniture:latest
             sudo docker run -d -p 8000:8000 -e SECRET_JWT=${{ secrets.SECRET_JWT }} -e OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }} -e DBUSER=${{ secrets.DBUSER }} -e DBPASS=${{ secrets.DBPASS }} -e DBHOST=${{ secrets.DBHOST }} -e DBPORT=${{ secrets.DBPORT }} -e DBNAME=${{ secrets.DBNAME }} --name furniture ${{ secrets.DOCKERHUBUSERNAME }}/furniture:latest
+            
