@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "8f8118f0-db22-4c29-ab54-0c03d4e7a487",
+		"name": "Order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29084841"
+	},
+	"item": [
+		{
+			"name": "GetAllOrders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFyYXN5QGdtYWlsLmNvbSIsImV4cCI6MTY5OTU0Njg2OCwiaWQiOjUsInJvbGUiOiJ1c2VyIn0.SlC6_B4xtPzN1jqeoYd4kssiSP0i_-sveptF2x2AGqE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/admin/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"admin",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrderId",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFyYXN5QGdtYWlsLmNvbSIsImV4cCI6MTY5OTU0Njg2OCwiaWQiOjUsInJvbGUiOiJ1c2VyIn0.SlC6_B4xtPzN1jqeoYd4kssiSP0i_-sveptF2x2AGqE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/admin/order/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"admin",
+						"order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateOrder (User)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFyYXN5QGdtYWlsLmNvbSIsImV4cCI6MTY5OTU0Njg2OCwiaWQiOjUsInJvbGUiOiJ1c2VyIn0.SlC6_B4xtPzN1jqeoYd4kssiSP0i_-sveptF2x2AGqE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\" : 4,\r\n    \"product_id\" : 18,\r\n    \"quantity\": 2,\r\n    \"totalPrice\" : 400000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/user/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletOrder (Admin)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZhamFyQGdtYWlsLmNvbSIsImV4cCI6MTY5OTU0NzMxOSwiaWQiOjgsInJvbGUiOiJhZG1pbiJ9.EFMzELQWc6plPuABrj1EYThsMFnS5LMlCg51mhcL1_Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/admin/order/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"admin",
+						"order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

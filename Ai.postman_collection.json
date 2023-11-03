@@ -1,0 +1,48 @@
+{
+	"info": {
+		"_postman_id": "01e40f2e-892b-472a-8803-2b9577efe82f",
+		"name": "Ai",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29084841"
+	},
+	"item": [
+		{
+			"name": "AIRecomendation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFyYXN5QGdtYWlsLmNvbSIsImV4cCI6MTY5OTYwNjUxNSwiaWQiOjUsInJvbGUiOiJ1c2VyIn0.WEQVSBugTtdVy64dyfKz5m9zsff31NS4F9dV8hodBfs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"budget\" : 5000000,\r\n    \"purpose\" : \"lemari untuk pakaian\",\r\n    \"brand\" : \"ikea\",\r\n    \"material\" : \"kayu\",\r\n    \"color\" : \"coklat\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/recommendation-furniture",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"recommendation-furniture"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
